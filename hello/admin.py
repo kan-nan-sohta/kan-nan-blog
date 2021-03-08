@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Blog
 
-# Register your models here.
+from markdownx.admin import MarkdownxModelAdmin
+
+admin.site.register(Blog, MarkdownxModelAdmin)

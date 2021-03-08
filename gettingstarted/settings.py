@@ -40,6 +40,18 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
+    'markdownx'
+]
+STATIC_URL = 'static'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+""" マークダウンのオプション設定 """
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'fenced_code', # コードブロック
+    'tables', # テーブル
+    'toc', # 目次
+    'nl2br', # 改行
 ]
 
 MIDDLEWARE = [
