@@ -1,9 +1,15 @@
+{% load static %}
 <!doctype html>
 <html>
 <head>
     <title>Blog</title>
 </head>
 <body>
+    <h2>
+        <a href="{% url 'blog:index' %}">Blog</a>
+        <a href="game/">ゲーム</a>
+        <a href="study/">勉強内容</a>
+    </h2>
     <h1>Blog</h1>
     {% block content %}
     {% endblock %}

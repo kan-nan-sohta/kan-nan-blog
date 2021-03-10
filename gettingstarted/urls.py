@@ -5,6 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 import hello.views as hello
+import game.views as game
+import study.views as study
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -17,7 +20,9 @@ from django.conf.urls.static import static
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", include('hello.urls'), name="index"),
+    path("", include('hello.urls'), name="hello"),
+    path("game/", include('game.urls'), name="game"),
+    path("study/", include('study.urls'), name="study"),
     path('markdownx/', include('markdownx.urls')),
     path("db/", hello.db, name="db"),
     path("admin/", admin.site.urls),

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
+    "study",
+    "game",
     'markdownx'
 ]
 STATIC_URL = 'static'
